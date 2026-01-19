@@ -1,0 +1,138 @@
+.form-card {
+  /* Glassmorphism handled by global glass-panel class */
+  transition: transform 0.3s ease;
+}
+
+.animate-form {
+  animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.2);
+  transform: scale(1.02);
+}
+
+.glass-input::placeholder {
+  color: #999;
+}
+
+.btn-submit {
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  border-radius: 12px;
+  background: var(--primary-gradient);
+  border: none;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+/* Animaciones de cambio de género */
+.pulse-gender {
+  animation: pulse-shake 0.4s ease-out !important;
+}
+
+@keyframes pulse-shake {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.05) rotate(-2deg);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+
+  75% {
+    transform: scale(1.05) rotate(-2deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gender-indicator {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeInScale 0.5s ease;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pink-flash {
+  background: rgba(255, 182, 193, 0.3);
+  border: 1px solid #ff69b4;
+  color: #d1436b;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+}
+
+.blue-flash {
+  background: rgba(135, 206, 235, 0.3);
+  border: 1px solid #4682b4;
+  color: #36607d;
+  box-shadow: 0 0 20px rgba(135, 206, 235, 0.4);
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
